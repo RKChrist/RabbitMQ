@@ -42,11 +42,11 @@ namespace WebApplication3.Controllers
             {
                 if (tour.Cancel)
                 {
-                    await _service.Send("Tour.Cancel", tour);
+                    await _service.Send("tour.cancel", tour);
                 }
                 else
                 {
-                    await _service.Send("Tour.Booked", tour);
+                    await _service.Send("tour.booked", tour);
                 }
             }
             return View(tour);

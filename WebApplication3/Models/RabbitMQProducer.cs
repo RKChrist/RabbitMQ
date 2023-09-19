@@ -17,10 +17,9 @@ namespace Rab
                 using var channel = connection.CreateModel();
 
                 channel.ExchangeDeclare(exchange: "topic_logs", type: ExchangeType.Topic);
-            // declare a server-named queue
-            
-                var json = JsonConvert.SerializeObject(tour);
-                var body = Encoding.UTF8.GetBytes(json);
+
+               
+                var body = Encoding.UTF8.GetBytes(tour.ToString());
                 channel.BasicPublish(exchange: "topic_logs",
                          routingKey: routingKey,
                          basicProperties: null,
