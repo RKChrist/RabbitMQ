@@ -1,1 +1,1 @@
-# Rab
+# RabbitMQ - School Homework
