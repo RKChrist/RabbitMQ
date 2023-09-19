@@ -12,7 +12,7 @@ channel.ExchangeDeclare(exchange: "topic_logs", type: ExchangeType.Topic);
 var queueName = channel.QueueDeclare().QueueName;
 channel.QueueBind(queue: queueName,
                   exchange: "topic_logs",
-                  routingKey: "Tour.Booked");
+                  routingKey: "tour.Booked");
 
 Console.WriteLine(" [*] Waiting for logs.");
 
